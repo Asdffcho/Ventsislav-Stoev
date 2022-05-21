@@ -1,3 +1,5 @@
+package Academy;
+
 import java.util.Scanner;
 
 public class Names {
