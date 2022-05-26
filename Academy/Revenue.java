@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Revenue {
   public static void main(String[] args) {
 
-    int price;
-    int quantity;
-    int discount;
-    int revenue = 0;
+    int price = 0;
+    float quantity = 0;
+    float discount = 0;
+    float revenue = 0f;
 
 
     Scanner scanner = new Scanner(System.in);
@@ -16,18 +16,19 @@ public class Revenue {
     System.out.println("Enter quantity: ");
     quantity = scanner.nextInt();
 
-    if ((quantity <= 100) && (quantity <= 120)) {
-      discount = (revenue * 15) / 100;
+    if ((quantity <= 120)) {
+      revenue = price * quantity;
+      discount = (revenue * 15) / 100; }
       if (quantity >= 120) {
-        discount = (revenue * 20) / 100;
-        if (quantity < 100) {
+        revenue = price * quantity;
+        discount = (revenue * 20) / 100; }
+        if (quantity <= 100) {
           discount = 0;
         }
-
+    System.out.println("The revenue from sale: " + revenue);
+    System.out.println("Discount: " + discount);
       }
 
-      System.out.println("The revenue from sale: ");
     }
-  }
-}
+
 
